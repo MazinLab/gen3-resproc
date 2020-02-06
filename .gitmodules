@@ -1,0 +1,6 @@
+[submodule "ip/fir-cfg"]
+	path = ip/fir-cfg
+	url = https://github.com/MazinLab/opfb-fir-cfg
+[submodule "ip/photon-trigger"]
+	path = ip/photon-trigger
+	url = https://github.com/MazinLab/photon-trigger

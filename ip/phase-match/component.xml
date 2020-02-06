@@ -1,0 +1,1003 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<spirit:component xmlns:xilinx="http://www.xilinx.com" xmlns:spirit="http://www.spiritconsortium.org/XMLSchema/SPIRIT/1685-2009" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <spirit:vendor>MazinLab</spirit:vendor>
+  <spirit:library>mkidgen3</spirit:library>
+  <spirit:name>phase_and_match</spirit:name>
+  <spirit:version>1.0</spirit:version>
+  <spirit:busInterfaces>
+    <spirit:busInterface>
+      <spirit:name>S_AXIS_IQ512TDM</spirit:name>
+      <spirit:busType spirit:vendor="xilinx.com" spirit:library="interface" spirit:name="axis" spirit:version="1.0"/>
+      <spirit:abstractionType spirit:vendor="xilinx.com" spirit:library="interface" spirit:name="axis_rtl" spirit:version="1.0"/>
+      <spirit:slave/>
+      <spirit:portMaps>
+        <spirit:portMap>
+          <spirit:logicalPort>
+            <spirit:name>TDATA</spirit:name>
+          </spirit:logicalPort>
+          <spirit:physicalPort>
+            <spirit:name>S_AXIS_IQ512TDM_tdata</spirit:name>
+            <spirit:vector>
+              <spirit:left spirit:format="long">31</spirit:left>
+              <spirit:right spirit:format="long">0</spirit:right>
+            </spirit:vector>
+          </spirit:physicalPort>
+        </spirit:portMap>
+        <spirit:portMap>
+          <spirit:logicalPort>
+            <spirit:name>TUSER</spirit:name>
+          </spirit:logicalPort>
+          <spirit:physicalPort>
+            <spirit:name>S_AXIS_IQ512TDM_tuser</spirit:name>
+            <spirit:vector>
+              <spirit:left spirit:format="long">8</spirit:left>
+              <spirit:right spirit:format="long">0</spirit:right>
+            </spirit:vector>
+          </spirit:physicalPort>
+        </spirit:portMap>
+        <spirit:portMap>
+          <spirit:logicalPort>
+            <spirit:name>TVALID</spirit:name>
+          </spirit:logicalPort>
+          <spirit:physicalPort>
+            <spirit:name>S_AXIS_IQ512TDM_tvalid</spirit:name>
+          </spirit:physicalPort>
+        </spirit:portMap>
+      </spirit:portMaps>
+      <spirit:parameters>
+        <spirit:parameter>
+          <spirit:name>TDATA_NUM_BYTES</spirit:name>
+          <spirit:value spirit:id="BUSIFPARAM_VALUE.S_AXIS_IQ512TDM.TDATA_NUM_BYTES">4</spirit:value>
+        </spirit:parameter>
+        <spirit:parameter>
+          <spirit:name>TDEST_WIDTH</spirit:name>
+          <spirit:value spirit:id="BUSIFPARAM_VALUE.S_AXIS_IQ512TDM.TDEST_WIDTH">0</spirit:value>
+        </spirit:parameter>
+        <spirit:parameter>
+          <spirit:name>TID_WIDTH</spirit:name>
+          <spirit:value spirit:id="BUSIFPARAM_VALUE.S_AXIS_IQ512TDM.TID_WIDTH">0</spirit:value>
+        </spirit:parameter>
+        <spirit:parameter>
+          <spirit:name>TUSER_WIDTH</spirit:name>
+          <spirit:value spirit:id="BUSIFPARAM_VALUE.S_AXIS_IQ512TDM.TUSER_WIDTH">9</spirit:value>
+        </spirit:parameter>
+        <spirit:parameter>
+          <spirit:name>HAS_TREADY</spirit:name>
+          <spirit:value spirit:id="BUSIFPARAM_VALUE.S_AXIS_IQ512TDM.HAS_TREADY">0</spirit:value>
+        </spirit:parameter>
+        <spirit:parameter>
+          <spirit:name>HAS_TSTRB</spirit:name>
+          <spirit:value spirit:id="BUSIFPARAM_VALUE.S_AXIS_IQ512TDM.HAS_TSTRB">0</spirit:value>
+        </spirit:parameter>
+        <spirit:parameter>
+          <spirit:name>HAS_TKEEP</spirit:name>
+          <spirit:value spirit:id="BUSIFPARAM_VALUE.S_AXIS_IQ512TDM.HAS_TKEEP">0</spirit:value>
+        </spirit:parameter>
+        <spirit:parameter>
+          <spirit:name>HAS_TLAST</spirit:name>
+          <spirit:value spirit:id="BUSIFPARAM_VALUE.S_AXIS_IQ512TDM.HAS_TLAST">0</spirit:value>
+        </spirit:parameter>
+        <spirit:parameter>
+          <spirit:name>LAYERED_METADATA</spirit:name>
+          <spirit:value spirit:id="BUSIFPARAM_VALUE.S_AXIS_IQ512TDM.LAYERED_METADATA">undef</spirit:value>
+        </spirit:parameter>
+      </spirit:parameters>
+    </spirit:busInterface>
+    <spirit:busInterface>
+      <spirit:name>M_AXIS_PHASE</spirit:name>
+      <spirit:busType spirit:vendor="xilinx.com" spirit:library="interface" spirit:name="axis" spirit:version="1.0"/>
+      <spirit:abstractionType spirit:vendor="xilinx.com" spirit:library="interface" spirit:name="axis_rtl" spirit:version="1.0"/>
+      <spirit:master/>
+      <spirit:portMaps>
+        <spirit:portMap>
+          <spirit:logicalPort>
+            <spirit:name>TDATA</spirit:name>
+          </spirit:logicalPort>
+          <spirit:physicalPort>
+            <spirit:name>M_AXIS_PHASE_tdata</spirit:name>
+            <spirit:vector>
+              <spirit:left spirit:format="long">23</spirit:left>
+              <spirit:right spirit:format="long">0</spirit:right>
+            </spirit:vector>
+          </spirit:physicalPort>
+        </spirit:portMap>
+        <spirit:portMap>
+          <spirit:logicalPort>
+            <spirit:name>TLAST</spirit:name>
+          </spirit:logicalPort>
+          <spirit:physicalPort>
+            <spirit:name>M_AXIS_PHASE_tlast</spirit:name>
+          </spirit:physicalPort>
+        </spirit:portMap>
+        <spirit:portMap>
+          <spirit:logicalPort>
+            <spirit:name>TUSER</spirit:name>
+          </spirit:logicalPort>
+          <spirit:physicalPort>
+            <spirit:name>M_AXIS_PHASE_tuser</spirit:name>
+            <spirit:vector>
+              <spirit:left spirit:format="long">8</spirit:left>
+              <spirit:right spirit:format="long">0</spirit:right>
+            </spirit:vector>
+          </spirit:physicalPort>
+        </spirit:portMap>
+        <spirit:portMap>
+          <spirit:logicalPort>
+            <spirit:name>TVALID</spirit:name>
+          </spirit:logicalPort>
+          <spirit:physicalPort>
+            <spirit:name>M_AXIS_PHASE_tvalid</spirit:name>
+          </spirit:physicalPort>
+        </spirit:portMap>
+      </spirit:portMaps>
+      <spirit:parameters>
+        <spirit:parameter>
+          <spirit:name>TDATA_NUM_BYTES</spirit:name>
+          <spirit:value spirit:id="BUSIFPARAM_VALUE.M_AXIS_PHASE.TDATA_NUM_BYTES">3</spirit:value>
+        </spirit:parameter>
+        <spirit:parameter>
+          <spirit:name>TDEST_WIDTH</spirit:name>
+          <spirit:value spirit:id="BUSIFPARAM_VALUE.M_AXIS_PHASE.TDEST_WIDTH">0</spirit:value>
+        </spirit:parameter>
+        <spirit:parameter>
+          <spirit:name>TID_WIDTH</spirit:name>
+          <spirit:value spirit:id="BUSIFPARAM_VALUE.M_AXIS_PHASE.TID_WIDTH">0</spirit:value>
+        </spirit:parameter>
+        <spirit:parameter>
+          <spirit:name>TUSER_WIDTH</spirit:name>
+          <spirit:value spirit:id="BUSIFPARAM_VALUE.M_AXIS_PHASE.TUSER_WIDTH">9</spirit:value>
+        </spirit:parameter>
+        <spirit:parameter>
+          <spirit:name>HAS_TREADY</spirit:name>
+          <spirit:value spirit:id="BUSIFPARAM_VALUE.M_AXIS_PHASE.HAS_TREADY">0</spirit:value>
+        </spirit:parameter>
+        <spirit:parameter>
+          <spirit:name>HAS_TSTRB</spirit:name>
+          <spirit:value spirit:id="BUSIFPARAM_VALUE.M_AXIS_PHASE.HAS_TSTRB">0</spirit:value>
+        </spirit:parameter>
+        <spirit:parameter>
+          <spirit:name>HAS_TKEEP</spirit:name>
+          <spirit:value spirit:id="BUSIFPARAM_VALUE.M_AXIS_PHASE.HAS_TKEEP">0</spirit:value>
+        </spirit:parameter>
+        <spirit:parameter>
+          <spirit:name>HAS_TLAST</spirit:name>
+          <spirit:value spirit:id="BUSIFPARAM_VALUE.M_AXIS_PHASE.HAS_TLAST">1</spirit:value>
+        </spirit:parameter>
+        <spirit:parameter>
+          <spirit:name>LAYERED_METADATA</spirit:name>
+          <spirit:value spirit:id="BUSIFPARAM_VALUE.M_AXIS_PHASE.LAYERED_METADATA">xilinx.com:interface:datatypes:1.0 {TDATA {datatype {name {attribs {resolve_type immediate dependency {} format string minimum {} maximum {}} value {}} bitwidth {attribs {resolve_type automatic dependency {} format long minimum {} maximum {}} value 12282} bitoffset {attribs {resolve_type immediate dependency {} format long minimum {} maximum {}} value 0} array_type {name {attribs {resolve_type immediate dependency {} format string minimum {} maximum {}} value chan} size {attribs {resolve_type ge
+nerated dependency chan_size format long minimum {} maximum {}} value 512} stride {attribs {resolve_type generated dependency chan_stride format long minimum {} maximum {}} value 24} datatype {name {attribs {resolve_type immediate dependency {} format string minimum {} maximum {}} value {}} bitwidth {attribs {resolve_type automatic dependency {} format long minimum {} maximum {}} value 18} bitoffset {attribs {resolve_type immediate dependency {} format long minimum {} maximum {}} value 0} array_
+type {name {attribs {resolve_type immediate dependency {} format string minimum {} maximum {}} value path} size {attribs {resolve_type generated dependency path_size format long minimum {} maximum {}} value 1} stride {attribs {resolve_type generated dependency path_stride format long minimum {} maximum {}} value 24} datatype {name {attribs {resolve_type immediate dependency {} format string minimum {} maximum {}} value {}} bitwidth {attribs {resolve_type generated dependency out_width format lon
+g minimum {} maximum {}} value 18} bitoffset {attribs {resolve_type immediate dependency {} format long minimum {} maximum {}} value 0} real {fixed {fractwidth {attribs {resolve_type generated dependency out_fractwidth format long minimum {} maximum {}} value 2} signed {attribs {resolve_type generated dependency out_signed format bool minimum {} maximum {}} value true}}}}}}}}} TDATA_WIDTH 24 TUSER {datatype {name {attribs {resolve_type immediate dependency {} format string minimum {} maximum {}}
+ value {}} bitwidth {attribs {resolve_type automatic dependency {} format long minimum {} maximum {}} value 9} bitoffset {attribs {resolve_type immediate dependency {} format long minimum {} maximum {}} value 0} struct {field_data_valid {name {attribs {resolve_type immediate dependency {} format string minimum {} maximum {}} value data_valid} enabled {attribs {resolve_type generated dependency data_valid_enabled format bool minimum {} maximum {}} value false} datatype {name {attribs {resolve_typ
+e immediate dependency {} format string minimum {} maximum {}} value {}} bitwidth {attribs {resolve_type generated dependency data_valid_bitwidth format long minimum {} maximum {}} value 0} bitoffset {attribs {resolve_type immediate dependency {} format long minimum {} maximum {}} value 0}}} field_chanid {name {attribs {resolve_type immediate dependency {} format string minimum {} maximum {}} value chanid} enabled {attribs {resolve_type generated dependency chanid_enabled format bool minimum {} 
+maximum {}} value true} datatype {name {attribs {resolve_type immediate dependency {} format string minimum {} maximum {}} value {}} bitwidth {attribs {resolve_type generated dependency chanid_bitwidth format long minimum {} maximum {}} value 9} bitoffset {attribs {resolve_type generated dependency chanid_bitoffset format long minimum {} maximum {}} value 0} integer {signed {attribs {resolve_type immediate dependency {} format bool minimum {} maximum {}} value false}}}} field_user {name {attribs
+ {resolve_type immediate dependency {} format string minimum {} maximum {}} value user} enabled {attribs {resolve_type generated dependency user_enabled format bool minimum {} maximum {}} value false} datatype {name {attribs {resolve_type immediate dependency {} format string minimum {} maximum {}} value {}} bitwidth {attribs {resolve_type generated dependency user_bitwidth format long minimum {} maximum {}} value 0} bitoffset {attribs {resolve_type generated dependency user_bitoffset format lon
+g minimum {} maximum {}} value 9}}}}}} TUSER_WIDTH 9}</spirit:value>
+        </spirit:parameter>
+      </spirit:parameters>
+    </spirit:busInterface>
+    <spirit:busInterface>
+      <spirit:name>S_AXIS_RELOAD</spirit:name>
+      <spirit:busType spirit:vendor="xilinx.com" spirit:library="interface" spirit:name="axis" spirit:version="1.0"/>
+      <spirit:abstractionType spirit:vendor="xilinx.com" spirit:library="interface" spirit:name="axis_rtl" spirit:version="1.0"/>
+      <spirit:slave/>
+      <spirit:portMaps>
+        <spirit:portMap>
+          <spirit:logicalPort>
+            <spirit:name>TDATA</spirit:name>
+          </spirit:logicalPort>
+          <spirit:physicalPort>
+            <spirit:name>S_AXIS_RELOAD_tdata</spirit:name>
+            <spirit:vector>
+              <spirit:left spirit:format="long">23</spirit:left>
+              <spirit:right spirit:format="long">0</spirit:right>
+            </spirit:vector>
+          </spirit:physicalPort>
+        </spirit:portMap>
+        <spirit:portMap>
+          <spirit:logicalPort>
+            <spirit:name>TLAST</spirit:name>
+          </spirit:logicalPort>
+          <spirit:physicalPort>
+            <spirit:name>S_AXIS_RELOAD_tlast</spirit:name>
+          </spirit:physicalPort>
+        </spirit:portMap>
+        <spirit:portMap>
+          <spirit:logicalPort>
+            <spirit:name>TREADY</spirit:name>
+          </spirit:logicalPort>
+          <spirit:physicalPort>
+            <spirit:name>S_AXIS_RELOAD_tready</spirit:name>
+          </spirit:physicalPort>
+        </spirit:portMap>
+        <spirit:portMap>
+          <spirit:logicalPort>
+            <spirit:name>TVALID</spirit:name>
+          </spirit:logicalPort>
+          <spirit:physicalPort>
+            <spirit:name>S_AXIS_RELOAD_tvalid</spirit:name>
+          </spirit:physicalPort>
+        </spirit:portMap>
+      </spirit:portMaps>
+      <spirit:parameters>
+        <spirit:parameter>
+          <spirit:name>TDATA_NUM_BYTES</spirit:name>
+          <spirit:value spirit:id="BUSIFPARAM_VALUE.S_AXIS_RELOAD.TDATA_NUM_BYTES">3</spirit:value>
+        </spirit:parameter>
+        <spirit:parameter>
+          <spirit:name>TDEST_WIDTH</spirit:name>
+          <spirit:value spirit:id="BUSIFPARAM_VALUE.S_AXIS_RELOAD.TDEST_WIDTH">0</spirit:value>
+        </spirit:parameter>
+        <spirit:parameter>
+          <spirit:name>TID_WIDTH</spirit:name>
+          <spirit:value spirit:id="BUSIFPARAM_VALUE.S_AXIS_RELOAD.TID_WIDTH">0</spirit:value>
+        </spirit:parameter>
+        <spirit:parameter>
+          <spirit:name>TUSER_WIDTH</spirit:name>
+          <spirit:value spirit:id="BUSIFPARAM_VALUE.S_AXIS_RELOAD.TUSER_WIDTH">0</spirit:value>
+        </spirit:parameter>
+        <spirit:parameter>
+          <spirit:name>HAS_TREADY</spirit:name>
+          <spirit:value spirit:id="BUSIFPARAM_VALUE.S_AXIS_RELOAD.HAS_TREADY">1</spirit:value>
+        </spirit:parameter>
+        <spirit:parameter>
+          <spirit:name>HAS_TSTRB</spirit:name>
+          <spirit:value spirit:id="BUSIFPARAM_VALUE.S_AXIS_RELOAD.HAS_TSTRB">0</spirit:value>
+        </spirit:parameter>
+        <spirit:parameter>
+          <spirit:name>HAS_TKEEP</spirit:name>
+          <spirit:value spirit:id="BUSIFPARAM_VALUE.S_AXIS_RELOAD.HAS_TKEEP">0</spirit:value>
+        </spirit:parameter>
+        <spirit:parameter>
+          <spirit:name>HAS_TLAST</spirit:name>
+          <spirit:value spirit:id="BUSIFPARAM_VALUE.S_AXIS_RELOAD.HAS_TLAST">1</spirit:value>
+        </spirit:parameter>
+        <spirit:parameter>
+          <spirit:name>LAYERED_METADATA</spirit:name>
+          <spirit:value spirit:id="BUSIFPARAM_VALUE.S_AXIS_RELOAD.LAYERED_METADATA">undef</spirit:value>
+        </spirit:parameter>
+      </spirit:parameters>
+    </spirit:busInterface>
+    <spirit:busInterface>
+      <spirit:name>S_AXIS_CONFIG</spirit:name>
+      <spirit:busType spirit:vendor="xilinx.com" spirit:library="interface" spirit:name="axis" spirit:version="1.0"/>
+      <spirit:abstractionType spirit:vendor="xilinx.com" spirit:library="interface" spirit:name="axis_rtl" spirit:version="1.0"/>
+      <spirit:slave/>
+      <spirit:portMaps>
+        <spirit:portMap>
+          <spirit:logicalPort>
+            <spirit:name>TDATA</spirit:name>
+          </spirit:logicalPort>
+          <spirit:physicalPort>
+            <spirit:name>S_AXIS_CONFIG_tdata</spirit:name>
+            <spirit:vector>
+              <spirit:left spirit:format="long">15</spirit:left>
+              <spirit:right spirit:format="long">0</spirit:right>
+            </spirit:vector>
+          </spirit:physicalPort>
+        </spirit:portMap>
+        <spirit:portMap>
+          <spirit:logicalPort>
+            <spirit:name>TLAST</spirit:name>
+          </spirit:logicalPort>
+          <spirit:physicalPort>
+            <spirit:name>S_AXIS_CONFIG_tlast</spirit:name>
+          </spirit:physicalPort>
+        </spirit:portMap>
+        <spirit:portMap>
+          <spirit:logicalPort>
+            <spirit:name>TREADY</spirit:name>
+          </spirit:logicalPort>
+          <spirit:physicalPort>
+            <spirit:name>S_AXIS_CONFIG_tready</spirit:name>
+          </spirit:physicalPort>
+        </spirit:portMap>
+        <spirit:portMap>
+          <spirit:logicalPort>
+            <spirit:name>TVALID</spirit:name>
+          </spirit:logicalPort>
+          <spirit:physicalPort>
+            <spirit:name>S_AXIS_CONFIG_tvalid</spirit:name>
+          </spirit:physicalPort>
+        </spirit:portMap>
+      </spirit:portMaps>
+      <spirit:parameters>
+        <spirit:parameter>
+          <spirit:name>TDATA_NUM_BYTES</spirit:name>
+          <spirit:value spirit:id="BUSIFPARAM_VALUE.S_AXIS_CONFIG.TDATA_NUM_BYTES">2</spirit:value>
+        </spirit:parameter>
+        <spirit:parameter>
+          <spirit:name>TDEST_WIDTH</spirit:name>
+          <spirit:value spirit:id="BUSIFPARAM_VALUE.S_AXIS_CONFIG.TDEST_WIDTH">0</spirit:value>
+        </spirit:parameter>
+        <spirit:parameter>
+          <spirit:name>TID_WIDTH</spirit:name>
+          <spirit:value spirit:id="BUSIFPARAM_VALUE.S_AXIS_CONFIG.TID_WIDTH">0</spirit:value>
+        </spirit:parameter>
+        <spirit:parameter>
+          <spirit:name>TUSER_WIDTH</spirit:name>
+          <spirit:value spirit:id="BUSIFPARAM_VALUE.S_AXIS_CONFIG.TUSER_WIDTH">0</spirit:value>
+        </spirit:parameter>
+        <spirit:parameter>
+          <spirit:name>HAS_TREADY</spirit:name>
+          <spirit:value spirit:id="BUSIFPARAM_VALUE.S_AXIS_CONFIG.HAS_TREADY">1</spirit:value>
+        </spirit:parameter>
+        <spirit:parameter>
+          <spirit:name>HAS_TSTRB</spirit:name>
+          <spirit:value spirit:id="BUSIFPARAM_VALUE.S_AXIS_CONFIG.HAS_TSTRB">0</spirit:value>
+        </spirit:parameter>
+        <spirit:parameter>
+          <spirit:name>HAS_TKEEP</spirit:name>
+          <spirit:value spirit:id="BUSIFPARAM_VALUE.S_AXIS_CONFIG.HAS_TKEEP">0</spirit:value>
+        </spirit:parameter>
+        <spirit:parameter>
+          <spirit:name>HAS_TLAST</spirit:name>
+          <spirit:value spirit:id="BUSIFPARAM_VALUE.S_AXIS_CONFIG.HAS_TLAST">1</spirit:value>
+        </spirit:parameter>
+        <spirit:parameter>
+          <spirit:name>LAYERED_METADATA</spirit:name>
+          <spirit:value spirit:id="BUSIFPARAM_VALUE.S_AXIS_CONFIG.LAYERED_METADATA">undef</spirit:value>
+        </spirit:parameter>
+      </spirit:parameters>
+    </spirit:busInterface>
+    <spirit:busInterface>
+      <spirit:name>INTR.FILTER_INTERRUPTS</spirit:name>
+      <spirit:busType spirit:vendor="xilinx.com" spirit:library="signal" spirit:name="interrupt" spirit:version="1.0"/>
+      <spirit:abstractionType spirit:vendor="xilinx.com" spirit:library="signal" spirit:name="interrupt_rtl" spirit:version="1.0"/>
+      <spirit:master/>
+      <spirit:portMaps>
+        <spirit:portMap>
+          <spirit:logicalPort>
+            <spirit:name>INTERRUPT</spirit:name>
+          </spirit:logicalPort>
+          <spirit:physicalPort>
+            <spirit:name>filter_interrupts</spirit:name>
+          </spirit:physicalPort>
+        </spirit:portMap>
+      </spirit:portMaps>
+      <spirit:parameters>
+        <spirit:parameter>
+          <spirit:name>SENSITIVITY</spirit:name>
+          <spirit:value spirit:id="BUSIFPARAM_VALUE.INTR.FILTER_INTERRUPTS.SENSITIVITY">EDGE_RISING:EDGE_RISING:EDGE_RISING:EDGE_RISING:EDGE_RISING:EDGE_RISING:EDGE_RISING</spirit:value>
+        </spirit:parameter>
+      </spirit:parameters>
+    </spirit:busInterface>
+    <spirit:busInterface>
+      <spirit:name>CLK.S_AXIS_IQ512TDM_ACLK</spirit:name>
+      <spirit:busType spirit:vendor="xilinx.com" spirit:library="signal" spirit:name="clock" spirit:version="1.0"/>
+      <spirit:abstractionType spirit:vendor="xilinx.com" spirit:library="signal" spirit:name="clock_rtl" spirit:version="1.0"/>
+      <spirit:slave/>
+      <spirit:portMaps>
+        <spirit:portMap>
+          <spirit:logicalPort>
+            <spirit:name>CLK</spirit:name>
+          </spirit:logicalPort>
+          <spirit:physicalPort>
+            <spirit:name>S_AXIS_IQ512TDM_aclk</spirit:name>
+          </spirit:physicalPort>
+        </spirit:portMap>
+      </spirit:portMaps>
+      <spirit:parameters>
+        <spirit:parameter>
+          <spirit:name>FREQ_HZ</spirit:name>
+          <spirit:value spirit:id="BUSIFPARAM_VALUE.CLK.S_AXIS_IQ512TDM_ACLK.FREQ_HZ">524994750</spirit:value>
+        </spirit:parameter>
+        <spirit:parameter>
+          <spirit:name>PHASE</spirit:name>
+          <spirit:value spirit:id="BUSIFPARAM_VALUE.CLK.S_AXIS_IQ512TDM_ACLK.PHASE">0.000</spirit:value>
+        </spirit:parameter>
+        <spirit:parameter>
+          <spirit:name>ASSOCIATED_BUSIF</spirit:name>
+          <spirit:value spirit:id="BUSIFPARAM_VALUE.CLK.S_AXIS_IQ512TDM_ACLK.ASSOCIATED_BUSIF">S_AXIS_IQ512TDM:M_AXIS_PHASE:S_AXIS_RELOAD:S_AXIS_CONFIG</spirit:value>
+        </spirit:parameter>
+        <spirit:parameter>
+          <spirit:name>ASSOCIATED_RESET</spirit:name>
+          <spirit:value spirit:id="BUSIFPARAM_VALUE.CLK.S_AXIS_IQ512TDM_ACLK.ASSOCIATED_RESET">ARESETN</spirit:value>
+        </spirit:parameter>
+      </spirit:parameters>
+    </spirit:busInterface>
+  </spirit:busInterfaces>
+  <spirit:model>
+    <spirit:views>
+      <spirit:view>
+        <spirit:name>xilinx_anylanguagesynthesis</spirit:name>
+        <spirit:displayName>Synthesis</spirit:displayName>
+        <spirit:envIdentifier>:vivado.xilinx.com:synthesis</spirit:envIdentifier>
+        <spirit:language>Verilog</spirit:language>
+        <spirit:modelName>phase_and_match</spirit:modelName>
+        <spirit:fileSetRef>
+          <spirit:localName>xilinx_anylanguagesynthesis_xilinx_com_ip_cordic_6_0__ref_view_fileset</spirit:localName>
+        </spirit:fileSetRef>
+        <spirit:fileSetRef>
+          <spirit:localName>xilinx_anylanguagesynthesis_xilinx_com_ip_fir_compiler_7_2__ref_view_fileset</spirit:localName>
+        </spirit:fileSetRef>
+        <spirit:fileSetRef>
+          <spirit:localName>xilinx_anylanguagesynthesis_xilinx_com_ip_xlconcat_2_1__ref_view_fileset</spirit:localName>
+        </spirit:fileSetRef>
+        <spirit:fileSetRef>
+          <spirit:localName>xilinx_anylanguagesynthesis_view_fileset</spirit:localName>
+        </spirit:fileSetRef>
+        <spirit:parameters>
+          <spirit:parameter>
+            <spirit:name>viewChecksum</spirit:name>
+            <spirit:value>def94cc0</spirit:value>
+          </spirit:parameter>
+        </spirit:parameters>
+      </spirit:view>
+      <spirit:view>
+        <spirit:name>xilinx_anylanguagebehavioralsimulation</spirit:name>
+        <spirit:displayName>Simulation</spirit:displayName>
+        <spirit:envIdentifier>:vivado.xilinx.com:simulation</spirit:envIdentifier>
+        <spirit:language>Verilog</spirit:language>
+        <spirit:modelName>phase_and_match</spirit:modelName>
+        <spirit:fileSetRef>
+          <spirit:localName>xilinx_anylanguagebehavioralsimulation_xilinx_com_ip_cordic_6_0__ref_view_fileset</spirit:localName>
+        </spirit:fileSetRef>
+        <spirit:fileSetRef>
+          <spirit:localName>xilinx_anylanguagebehavioralsimulation_xilinx_com_ip_fir_compiler_7_2__ref_view_fileset</spirit:localName>
+        </spirit:fileSetRef>
+        <spirit:fileSetRef>
+          <spirit:localName>xilinx_anylanguagebehavioralsimulation_xilinx_com_ip_xlconcat_2_1__ref_view_fileset</spirit:localName>
+        </spirit:fileSetRef>
+        <spirit:fileSetRef>
+          <spirit:localName>xilinx_anylanguagebehavioralsimulation_view_fileset</spirit:localName>
+        </spirit:fileSetRef>
+        <spirit:parameters>
+          <spirit:parameter>
+            <spirit:name>viewChecksum</spirit:name>
+            <spirit:value>0bca10f6</spirit:value>
+          </spirit:parameter>
+        </spirit:parameters>
+      </spirit:view>
+      <spirit:view>
+        <spirit:name>xilinx_xpgui</spirit:name>
+        <spirit:displayName>UI Layout</spirit:displayName>
+        <spirit:envIdentifier>:vivado.xilinx.com:xgui.ui</spirit:envIdentifier>
+        <spirit:fileSetRef>
+          <spirit:localName>xilinx_xpgui_view_fileset</spirit:localName>
+        </spirit:fileSetRef>
+        <spirit:parameters>
+          <spirit:parameter>
+            <spirit:name>viewChecksum</spirit:name>
+            <spirit:value>f64a5dae</spirit:value>
+          </spirit:parameter>
+        </spirit:parameters>
+      </spirit:view>
+      <spirit:view>
+        <spirit:name>archive_project</spirit:name>
+        <spirit:displayName>Miscellaneous</spirit:displayName>
+        <spirit:envIdentifier>:vivado.xilinx.com:misc.files</spirit:envIdentifier>
+        <spirit:fileSetRef>
+          <spirit:localName>archive_project_view_fileset</spirit:localName>
+        </spirit:fileSetRef>
+        <spirit:parameters>
+          <spirit:parameter>
+            <spirit:name>viewChecksum</spirit:name>
+            <spirit:value>3f0b659e</spirit:value>
+          </spirit:parameter>
+        </spirit:parameters>
+      </spirit:view>
+    </spirit:views>
+    <spirit:ports>
+      <spirit:port>
+        <spirit:name>M_AXIS_PHASE_tdata</spirit:name>
+        <spirit:wire>
+          <spirit:direction>out</spirit:direction>
+          <spirit:vector>
+            <spirit:left spirit:format="long">23</spirit:left>
+            <spirit:right spirit:format="long">0</spirit:right>
+          </spirit:vector>
+          <spirit:wireTypeDefs>
+            <spirit:wireTypeDef>
+              <spirit:typeName>std_logic_vector</spirit:typeName>
+              <spirit:viewNameRef>xilinx_anylanguagesynthesis</spirit:viewNameRef>
+              <spirit:viewNameRef>xilinx_anylanguagebehavioralsimulation</spirit:viewNameRef>
+            </spirit:wireTypeDef>
+          </spirit:wireTypeDefs>
+        </spirit:wire>
+      </spirit:port>
+      <spirit:port>
+        <spirit:name>M_AXIS_PHASE_tlast</spirit:name>
+        <spirit:wire>
+          <spirit:direction>out</spirit:direction>
+          <spirit:wireTypeDefs>
+            <spirit:wireTypeDef>
+              <spirit:typeName>std_logic</spirit:typeName>
+              <spirit:viewNameRef>xilinx_anylanguagesynthesis</spirit:viewNameRef>
+              <spirit:viewNameRef>xilinx_anylanguagebehavioralsimulation</spirit:viewNameRef>
+            </spirit:wireTypeDef>
+          </spirit:wireTypeDefs>
+        </spirit:wire>
+      </spirit:port>
+      <spirit:port>
+        <spirit:name>M_AXIS_PHASE_tuser</spirit:name>
+        <spirit:wire>
+          <spirit:direction>out</spirit:direction>
+          <spirit:vector>
+            <spirit:left spirit:format="long">8</spirit:left>
+            <spirit:right spirit:format="long">0</spirit:right>
+          </spirit:vector>
+          <spirit:wireTypeDefs>
+            <spirit:wireTypeDef>
+              <spirit:typeName>std_logic_vector</spirit:typeName>
+              <spirit:viewNameRef>xilinx_anylanguagesynthesis</spirit:viewNameRef>
+              <spirit:viewNameRef>xilinx_anylanguagebehavioralsimulation</spirit:viewNameRef>
+            </spirit:wireTypeDef>
+          </spirit:wireTypeDefs>
+        </spirit:wire>
+      </spirit:port>
+      <spirit:port>
+        <spirit:name>M_AXIS_PHASE_tvalid</spirit:name>
+        <spirit:wire>
+          <spirit:direction>out</spirit:direction>
+          <spirit:wireTypeDefs>
+            <spirit:wireTypeDef>
+              <spirit:typeName>std_logic</spirit:typeName>
+              <spirit:viewNameRef>xilinx_anylanguagesynthesis</spirit:viewNameRef>
+              <spirit:viewNameRef>xilinx_anylanguagebehavioralsimulation</spirit:viewNameRef>
+            </spirit:wireTypeDef>
+          </spirit:wireTypeDefs>
+        </spirit:wire>
+      </spirit:port>
+      <spirit:port>
+        <spirit:name>S_AXIS_CONFIG_tdata</spirit:name>
+        <spirit:wire>
+          <spirit:direction>in</spirit:direction>
+          <spirit:vector>
+            <spirit:left spirit:format="long">15</spirit:left>
+            <spirit:right spirit:format="long">0</spirit:right>
+          </spirit:vector>
+          <spirit:wireTypeDefs>
+            <spirit:wireTypeDef>
+              <spirit:typeName>std_logic_vector</spirit:typeName>
+              <spirit:viewNameRef>xilinx_anylanguagesynthesis</spirit:viewNameRef>
+              <spirit:viewNameRef>xilinx_anylanguagebehavioralsimulation</spirit:viewNameRef>
+            </spirit:wireTypeDef>
+          </spirit:wireTypeDefs>
+        </spirit:wire>
+      </spirit:port>
+      <spirit:port>
+        <spirit:name>S_AXIS_CONFIG_tlast</spirit:name>
+        <spirit:wire>
+          <spirit:direction>in</spirit:direction>
+          <spirit:wireTypeDefs>
+            <spirit:wireTypeDef>
+              <spirit:typeName>std_logic</spirit:typeName>
+              <spirit:viewNameRef>xilinx_anylanguagesynthesis</spirit:viewNameRef>
+              <spirit:viewNameRef>xilinx_anylanguagebehavioralsimulation</spirit:viewNameRef>
+            </spirit:wireTypeDef>
+          </spirit:wireTypeDefs>
+        </spirit:wire>
+      </spirit:port>
+      <spirit:port>
+        <spirit:name>S_AXIS_CONFIG_tready</spirit:name>
+        <spirit:wire>
+          <spirit:direction>out</spirit:direction>
+          <spirit:wireTypeDefs>
+            <spirit:wireTypeDef>
+              <spirit:typeName>std_logic</spirit:typeName>
+              <spirit:viewNameRef>xilinx_anylanguagesynthesis</spirit:viewNameRef>
+              <spirit:viewNameRef>xilinx_anylanguagebehavioralsimulation</spirit:viewNameRef>
+            </spirit:wireTypeDef>
+          </spirit:wireTypeDefs>
+        </spirit:wire>
+      </spirit:port>
+      <spirit:port>
+        <spirit:name>S_AXIS_CONFIG_tvalid</spirit:name>
+        <spirit:wire>
+          <spirit:direction>in</spirit:direction>
+          <spirit:wireTypeDefs>
+            <spirit:wireTypeDef>
+              <spirit:typeName>std_logic</spirit:typeName>
+              <spirit:viewNameRef>xilinx_anylanguagesynthesis</spirit:viewNameRef>
+              <spirit:viewNameRef>xilinx_anylanguagebehavioralsimulation</spirit:viewNameRef>
+            </spirit:wireTypeDef>
+          </spirit:wireTypeDefs>
+        </spirit:wire>
+      </spirit:port>
+      <spirit:port>
+        <spirit:name>S_AXIS_IQ512TDM_aclk</spirit:name>
+        <spirit:wire>
+          <spirit:direction>in</spirit:direction>
+          <spirit:wireTypeDefs>
+            <spirit:wireTypeDef>
+              <spirit:typeName>std_logic</spirit:typeName>
+              <spirit:viewNameRef>xilinx_anylanguagesynthesis</spirit:viewNameRef>
+              <spirit:viewNameRef>xilinx_anylanguagebehavioralsimulation</spirit:viewNameRef>
+            </spirit:wireTypeDef>
+          </spirit:wireTypeDefs>
+        </spirit:wire>
+      </spirit:port>
+      <spirit:port>
+        <spirit:name>S_AXIS_IQ512TDM_tdata</spirit:name>
+        <spirit:wire>
+          <spirit:direction>in</spirit:direction>
+          <spirit:vector>
+            <spirit:left spirit:format="long">31</spirit:left>
+            <spirit:right spirit:format="long">0</spirit:right>
+          </spirit:vector>
+          <spirit:wireTypeDefs>
+            <spirit:wireTypeDef>
+              <spirit:typeName>std_logic_vector</spirit:typeName>
+              <spirit:viewNameRef>xilinx_anylanguagesynthesis</spirit:viewNameRef>
+              <spirit:viewNameRef>xilinx_anylanguagebehavioralsimulation</spirit:viewNameRef>
+            </spirit:wireTypeDef>
+          </spirit:wireTypeDefs>
+        </spirit:wire>
+      </spirit:port>
+      <spirit:port>
+        <spirit:name>S_AXIS_IQ512TDM_tuser</spirit:name>
+        <spirit:wire>
+          <spirit:direction>in</spirit:direction>
+          <spirit:vector>
+            <spirit:left spirit:format="long">8</spirit:left>
+            <spirit:right spirit:format="long">0</spirit:right>
+          </spirit:vector>
+          <spirit:wireTypeDefs>
+            <spirit:wireTypeDef>
+              <spirit:typeName>std_logic_vector</spirit:typeName>
+              <spirit:viewNameRef>xilinx_anylanguagesynthesis</spirit:viewNameRef>
+              <spirit:viewNameRef>xilinx_anylanguagebehavioralsimulation</spirit:viewNameRef>
+            </spirit:wireTypeDef>
+          </spirit:wireTypeDefs>
+        </spirit:wire>
+      </spirit:port>
+      <spirit:port>
+        <spirit:name>S_AXIS_IQ512TDM_tvalid</spirit:name>
+        <spirit:wire>
+          <spirit:direction>in</spirit:direction>
+          <spirit:wireTypeDefs>
+            <spirit:wireTypeDef>
+              <spirit:typeName>std_logic</spirit:typeName>
+              <spirit:viewNameRef>xilinx_anylanguagesynthesis</spirit:viewNameRef>
+              <spirit:viewNameRef>xilinx_anylanguagebehavioralsimulation</spirit:viewNameRef>
+            </spirit:wireTypeDef>
+          </spirit:wireTypeDefs>
+        </spirit:wire>
+      </spirit:port>
+      <spirit:port>
+        <spirit:name>S_AXIS_RELOAD_tdata</spirit:name>
+        <spirit:wire>
+          <spirit:direction>in</spirit:direction>
+          <spirit:vector>
+            <spirit:left spirit:format="long">23</spirit:left>
+            <spirit:right spirit:format="long">0</spirit:right>
+          </spirit:vector>
+          <spirit:wireTypeDefs>
+            <spirit:wireTypeDef>
+              <spirit:typeName>std_logic_vector</spirit:typeName>
+              <spirit:viewNameRef>xilinx_anylanguagesynthesis</spirit:viewNameRef>
+              <spirit:viewNameRef>xilinx_anylanguagebehavioralsimulation</spirit:viewNameRef>
+            </spirit:wireTypeDef>
+          </spirit:wireTypeDefs>
+        </spirit:wire>
+      </spirit:port>
+      <spirit:port>
+        <spirit:name>S_AXIS_RELOAD_tlast</spirit:name>
+        <spirit:wire>
+          <spirit:direction>in</spirit:direction>
+          <spirit:wireTypeDefs>
+            <spirit:wireTypeDef>
+              <spirit:typeName>std_logic</spirit:typeName>
+              <spirit:viewNameRef>xilinx_anylanguagesynthesis</spirit:viewNameRef>
+              <spirit:viewNameRef>xilinx_anylanguagebehavioralsimulation</spirit:viewNameRef>
+            </spirit:wireTypeDef>
+          </spirit:wireTypeDefs>
+        </spirit:wire>
+      </spirit:port>
+      <spirit:port>
+        <spirit:name>S_AXIS_RELOAD_tready</spirit:name>
+        <spirit:wire>
+          <spirit:direction>out</spirit:direction>
+          <spirit:wireTypeDefs>
+            <spirit:wireTypeDef>
+              <spirit:typeName>std_logic</spirit:typeName>
+              <spirit:viewNameRef>xilinx_anylanguagesynthesis</spirit:viewNameRef>
+              <spirit:viewNameRef>xilinx_anylanguagebehavioralsimulation</spirit:viewNameRef>
+            </spirit:wireTypeDef>
+          </spirit:wireTypeDefs>
+        </spirit:wire>
+      </spirit:port>
+      <spirit:port>
+        <spirit:name>S_AXIS_RELOAD_tvalid</spirit:name>
+        <spirit:wire>
+          <spirit:direction>in</spirit:direction>
+          <spirit:wireTypeDefs>
+            <spirit:wireTypeDef>
+              <spirit:typeName>std_logic</spirit:typeName>
+              <spirit:viewNameRef>xilinx_anylanguagesynthesis</spirit:viewNameRef>
+              <spirit:viewNameRef>xilinx_anylanguagebehavioralsimulation</spirit:viewNameRef>
+            </spirit:wireTypeDef>
+          </spirit:wireTypeDefs>
+        </spirit:wire>
+      </spirit:port>
+      <spirit:port>
+        <spirit:name>filter_interrupts</spirit:name>
+        <spirit:wire>
+          <spirit:direction>out</spirit:direction>
+          <spirit:vector>
+            <spirit:left spirit:format="long">6</spirit:left>
+            <spirit:right spirit:format="long">0</spirit:right>
+          </spirit:vector>
+          <spirit:wireTypeDefs>
+            <spirit:wireTypeDef>
+              <spirit:typeName>std_logic_vector</spirit:typeName>
+              <spirit:viewNameRef>xilinx_anylanguagesynthesis</spirit:viewNameRef>
+              <spirit:viewNameRef>xilinx_anylanguagebehavioralsimulation</spirit:viewNameRef>
+            </spirit:wireTypeDef>
+          </spirit:wireTypeDefs>
+        </spirit:wire>
+      </spirit:port>
+    </spirit:ports>
+  </spirit:model>
+  <spirit:fileSets>
+    <spirit:fileSet>
+      <spirit:name>xilinx_anylanguagesynthesis_view_fileset</spirit:name>
+      <spirit:file>
+        <spirit:name>src/30-tap-256-rid-opt-match.coe</spirit:name>
+        <spirit:userFileType>coe</spirit:userFileType>
+        <spirit:userFileType>IMPORTED_FILE</spirit:userFileType>
+      </spirit:file>
+      <spirit:file>
+        <spirit:name>src/phase_and_match_arctan_phase_0/phase_and_match_arctan_phase_0.xci</spirit:name>
+        <spirit:userFileType>xci</spirit:userFileType>
+        <spirit:userFileType>IMPORTED_FILE</spirit:userFileType>
+        <spirit:userFileType>CELL_NAME_arctan_phase</spirit:userFileType>
+        <spirit:define>
+          <spirit:name>processing_order</spirit:name>
+          <spirit:value>early</spirit:value>
+        </spirit:define>
+      </spirit:file>
+      <spirit:file>
+        <spirit:name>src/phase_and_match_matched_filter_512x_0/phase_and_match_matched_filter_512x_0.xci</spirit:name>
+        <spirit:userFileType>xci</spirit:userFileType>
+        <spirit:userFileType>IMPORTED_FILE</spirit:userFileType>
+        <spirit:userFileType>CELL_NAME_matched_filter_512x</spirit:userFileType>
+        <spirit:define>
+          <spirit:name>processing_order</spirit:name>
+          <spirit:value>early</spirit:value>
+        </spirit:define>
+      </spirit:file>
+      <spirit:file>
+        <spirit:name>src/phase_and_match_xlconcat_0_0/phase_and_match_xlconcat_0_0.xci</spirit:name>
+        <spirit:userFileType>xci</spirit:userFileType>
+        <spirit:userFileType>IMPORTED_FILE</spirit:userFileType>
+        <spirit:userFileType>CELL_NAME_xlconcat_0</spirit:userFileType>
+        <spirit:define>
+          <spirit:name>processing_order</spirit:name>
+          <spirit:value>early</spirit:value>
+        </spirit:define>
+      </spirit:file>
+      <spirit:file>
+        <spirit:name>src/phase_and_match_ooc.xdc</spirit:name>
+        <spirit:userFileType>xdc</spirit:userFileType>
+        <spirit:userFileType>IMPORTED_FILE</spirit:userFileType>
+        <spirit:userFileType>SCOPED_TO_REF_phase_and_match</spirit:userFileType>
+        <spirit:userFileType>USED_IN_out_of_context</spirit:userFileType>
+      </spirit:file>
+      <spirit:file>
+        <spirit:name>src/phase_and_match.v</spirit:name>
+        <spirit:fileType>verilogSource</spirit:fileType>
+        <spirit:userFileType>CHECKSUM_1ef24579</spirit:userFileType>
+        <spirit:userFileType>IMPORTED_FILE</spirit:userFileType>
+        <spirit:define>
+          <spirit:name>processing_order</spirit:name>
+          <spirit:value>early</spirit:value>
+        </spirit:define>
+      </spirit:file>
+    </spirit:fileSet>
+    <spirit:fileSet>
+      <spirit:name>xilinx_anylanguagesynthesis_xilinx_com_ip_cordic_6_0__ref_view_fileset</spirit:name>
+      <spirit:vendorExtensions>
+        <xilinx:subCoreRef>
+          <xilinx:componentRef xsi:type="xilinx:componentRefType" xilinx:vendor="xilinx.com" xilinx:library="ip" xilinx:name="cordic" xilinx:version="6.0">
+            <xilinx:mode xilinx:name="create_mode"/>
+          </xilinx:componentRef>
+        </xilinx:subCoreRef>
+      </spirit:vendorExtensions>
+    </spirit:fileSet>
+    <spirit:fileSet>
+      <spirit:name>xilinx_anylanguagesynthesis_xilinx_com_ip_fir_compiler_7_2__ref_view_fileset</spirit:name>
+      <spirit:vendorExtensions>
+        <xilinx:subCoreRef>
+          <xilinx:componentRef xilinx:vendor="xilinx.com" xilinx:library="ip" xilinx:name="fir_compiler" xilinx:version="7.2">
+            <xilinx:mode xilinx:name="create_mode"/>
+          </xilinx:componentRef>
+        </xilinx:subCoreRef>
+      </spirit:vendorExtensions>
+    </spirit:fileSet>
+    <spirit:fileSet>
+      <spirit:name>xilinx_anylanguagesynthesis_xilinx_com_ip_xlconcat_2_1__ref_view_fileset</spirit:name>
+      <spirit:vendorExtensions>
+        <xilinx:subCoreRef>
+          <xilinx:componentRef xilinx:vendor="xilinx.com" xilinx:library="ip" xilinx:name="xlconcat" xilinx:version="2.1">
+            <xilinx:mode xilinx:name="create_mode"/>
+          </xilinx:componentRef>
+        </xilinx:subCoreRef>
+      </spirit:vendorExtensions>
+    </spirit:fileSet>
+    <spirit:fileSet>
+      <spirit:name>xilinx_anylanguagebehavioralsimulation_view_fileset</spirit:name>
+      <spirit:file>
+        <spirit:name>src/30-tap-256-rid-opt-match.coe</spirit:name>
+        <spirit:userFileType>coe</spirit:userFileType>
+        <spirit:userFileType>IMPORTED_FILE</spirit:userFileType>
+      </spirit:file>
+      <spirit:file>
+        <spirit:name>src/phase_and_match_arctan_phase_0/phase_and_match_arctan_phase_0.xci</spirit:name>
+        <spirit:userFileType>xci</spirit:userFileType>
+        <spirit:userFileType>IMPORTED_FILE</spirit:userFileType>
+        <spirit:userFileType>CELL_NAME_arctan_phase</spirit:userFileType>
+        <spirit:define>
+          <spirit:name>processing_order</spirit:name>
+          <spirit:value>early</spirit:value>
+        </spirit:define>
+      </spirit:file>
+      <spirit:file>
+        <spirit:name>src/phase_and_match_matched_filter_512x_0/phase_and_match_matched_filter_512x_0.xci</spirit:name>
+        <spirit:userFileType>xci</spirit:userFileType>
+        <spirit:userFileType>IMPORTED_FILE</spirit:userFileType>
+        <spirit:userFileType>CELL_NAME_matched_filter_512x</spirit:userFileType>
+        <spirit:define>
+          <spirit:name>processing_order</spirit:name>
+          <spirit:value>early</spirit:value>
+        </spirit:define>
+      </spirit:file>
+      <spirit:file>
+        <spirit:name>src/phase_and_match_xlconcat_0_0/phase_and_match_xlconcat_0_0.xci</spirit:name>
+        <spirit:userFileType>xci</spirit:userFileType>
+        <spirit:userFileType>IMPORTED_FILE</spirit:userFileType>
+        <spirit:userFileType>CELL_NAME_xlconcat_0</spirit:userFileType>
+        <spirit:define>
+          <spirit:name>processing_order</spirit:name>
+          <spirit:value>early</spirit:value>
+        </spirit:define>
+      </spirit:file>
+      <spirit:file>
+        <spirit:name>sim/phase_and_match.protoinst</spirit:name>
+        <spirit:fileType>unknown</spirit:fileType>
+        <spirit:userFileType>IMPORTED_FILE</spirit:userFileType>
+      </spirit:file>
+      <spirit:file>
+        <spirit:name>sim/phase_and_match.v</spirit:name>
+        <spirit:fileType>verilogSource</spirit:fileType>
+        <spirit:userFileType>IMPORTED_FILE</spirit:userFileType>
+        <spirit:define>
+          <spirit:name>processing_order</spirit:name>
+          <spirit:value>early</spirit:value>
+        </spirit:define>
+      </spirit:file>
+    </spirit:fileSet>
+    <spirit:fileSet>
+      <spirit:name>xilinx_anylanguagebehavioralsimulation_xilinx_com_ip_cordic_6_0__ref_view_fileset</spirit:name>
+      <spirit:vendorExtensions>
+        <xilinx:subCoreRef>
+          <xilinx:componentRef xsi:type="xilinx:componentRefType" xilinx:vendor="xilinx.com" xilinx:library="ip" xilinx:name="cordic" xilinx:version="6.0">
+            <xilinx:mode xilinx:name="create_mode"/>
+          </xilinx:componentRef>
+        </xilinx:subCoreRef>
+      </spirit:vendorExtensions>
+    </spirit:fileSet>
+    <spirit:fileSet>
+      <spirit:name>xilinx_anylanguagebehavioralsimulation_xilinx_com_ip_fir_compiler_7_2__ref_view_fileset</spirit:name>
+      <spirit:vendorExtensions>
+        <xilinx:subCoreRef>
+          <xilinx:componentRef xilinx:vendor="xilinx.com" xilinx:library="ip" xilinx:name="fir_compiler" xilinx:version="7.2">
+            <xilinx:mode xilinx:name="create_mode"/>
+          </xilinx:componentRef>
+        </xilinx:subCoreRef>
+      </spirit:vendorExtensions>
+    </spirit:fileSet>
+    <spirit:fileSet>
+      <spirit:name>xilinx_anylanguagebehavioralsimulation_xilinx_com_ip_xlconcat_2_1__ref_view_fileset</spirit:name>
+      <spirit:vendorExtensions>
+        <xilinx:subCoreRef>
+          <xilinx:componentRef xilinx:vendor="xilinx.com" xilinx:library="ip" xilinx:name="xlconcat" xilinx:version="2.1">
+            <xilinx:mode xilinx:name="create_mode"/>
+          </xilinx:componentRef>
+        </xilinx:subCoreRef>
+      </spirit:vendorExtensions>
+    </spirit:fileSet>
+    <spirit:fileSet>
+      <spirit:name>xilinx_xpgui_view_fileset</spirit:name>
+      <spirit:file>
+        <spirit:name>xgui/phase_and_match_v1_0.tcl</spirit:name>
+        <spirit:fileType>tclSource</spirit:fileType>
+        <spirit:userFileType>CHECKSUM_f64a5dae</spirit:userFileType>
+        <spirit:userFileType>XGUI_VERSION_2</spirit:userFileType>
+      </spirit:file>
+    </spirit:fileSet>
+    <spirit:fileSet>
+      <spirit:name>archive_project_view_fileset</spirit:name>
+      <spirit:file>
+        <spirit:name>ip_project_archive.zip</spirit:name>
+        <spirit:userFileType>zip</spirit:userFileType>
+      </spirit:file>
+    </spirit:fileSet>
+  </spirit:fileSets>
+  <spirit:description>Arctan and apply matched filter</spirit:description>
+  <spirit:parameters>
+    <spirit:parameter>
+      <spirit:name>Component_Name</spirit:name>
+      <spirit:value spirit:resolve="user" spirit:id="PARAM_VALUE.Component_Name" spirit:order="1">phase_and_match_v1_0</spirit:value>
+    </spirit:parameter>
+  </spirit:parameters>
+  <spirit:vendorExtensions>
+    <xilinx:coreExtensions>
+      <xilinx:supportedFamilies>
+        <xilinx:family xilinx:lifeCycle="Production">zynquplus</xilinx:family>
+      </xilinx:supportedFamilies>
+      <xilinx:taxonomies>
+        <xilinx:taxonomy>/UserIP</xilinx:taxonomy>
+      </xilinx:taxonomies>
+      <xilinx:displayName>phase_filter</xilinx:displayName>
+      <xilinx:definitionSource>IPI</xilinx:definitionSource>
+      <xilinx:coreRevision>2</xilinx:coreRevision>
+      <xilinx:coreCreationDateTime>2020-02-06T06:39:46Z</xilinx:coreCreationDateTime>
+      <xilinx:tags>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@337faff2_ARCHIVE_LOCATION">c:/Users/one/xilinx_projects/gen3-resproc/ip/phase-match</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@64920e8c_ARCHIVE_LOCATION">c:/Users/one/xilinx_projects/gen3-resproc/ip/phase-match</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@76cb7e37_ARCHIVE_LOCATION">c:/Users/one/xilinx_projects/gen3-resproc/ip/phase-match</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@6b05611d_ARCHIVE_LOCATION">c:/Users/one/xilinx_projects/gen3-resproc/ip/phase-match</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@59f933b7_ARCHIVE_LOCATION">c:/Users/one/xilinx_projects/gen3-resproc/ip/phase-match</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@8ca5f3c_ARCHIVE_LOCATION">c:/Users/one/xilinx_projects/gen3-resproc/ip/phase-match</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@7f805043_ARCHIVE_LOCATION">c:/Users/one/xilinx_projects/gen3-resproc/ip/phase-match</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@5d08691d_ARCHIVE_LOCATION">c:/Users/one/xilinx_projects/gen3-resproc/ip/phase-match</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@4c573eee_ARCHIVE_LOCATION">c:/Users/one/xilinx_projects/gen3-resproc/ip/phase-match</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@2ad58048_ARCHIVE_LOCATION">c:/Users/one/xilinx_projects/gen3-resproc/ip/phase-match</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@563319d4_ARCHIVE_LOCATION">c:/Users/one/xilinx_projects/gen3-resproc/ip/phase-match</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@3bb1a045_ARCHIVE_LOCATION">c:/Users/one/xilinx_projects/gen3-resproc/ip/phase-match</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@5b23804_ARCHIVE_LOCATION">c:/Users/one/xilinx_projects/gen3-resproc/ip/phase-match</xilinx:tag>
+      </xilinx:tags>
+      <xilinx:configElementInfos>
+        <xilinx:configElementInfo xilinx:referenceId="BUSIFPARAM_VALUE.CLK.S_AXIS_IQ512TDM_ACLK.ASSOCIATED_BUSIF" xilinx:valueSource="user"/>
+        <xilinx:configElementInfo xilinx:referenceId="BUSIFPARAM_VALUE.CLK.S_AXIS_IQ512TDM_ACLK.FREQ_HZ" xilinx:valueSource="user"/>
+        <xilinx:configElementInfo xilinx:referenceId="BUSIFPARAM_VALUE.INTR.FILTER_INTERRUPTS.SENSITIVITY" xilinx:valueSource="ip_propagated" xilinx:valuePermission="bd"/>
+        <xilinx:configElementInfo xilinx:referenceId="BUSIFPARAM_VALUE.M_AXIS_PHASE.HAS_TKEEP" xilinx:valueSource="constant_prop" xilinx:valuePermission="bd"/>
+        <xilinx:configElementInfo xilinx:referenceId="BUSIFPARAM_VALUE.M_AXIS_PHASE.HAS_TLAST" xilinx:valueSource="auto_prop" xilinx:valuePermission="bd"/>
+        <xilinx:configElementInfo xilinx:referenceId="BUSIFPARAM_VALUE.M_AXIS_PHASE.HAS_TREADY" xilinx:valueSource="auto_prop" xilinx:valuePermission="bd"/>
+        <xilinx:configElementInfo xilinx:referenceId="BUSIFPARAM_VALUE.M_AXIS_PHASE.HAS_TSTRB" xilinx:valueSource="constant_prop" xilinx:valuePermission="bd"/>
+        <xilinx:configElementInfo xilinx:referenceId="BUSIFPARAM_VALUE.M_AXIS_PHASE.LAYERED_METADATA" xilinx:valueSource="ip_propagated" xilinx:valuePermission="bd"/>
+        <xilinx:configElementInfo xilinx:referenceId="BUSIFPARAM_VALUE.M_AXIS_PHASE.TDATA_NUM_BYTES" xilinx:valueSource="auto_prop" xilinx:valuePermission="bd"/>
+        <xilinx:configElementInfo xilinx:referenceId="BUSIFPARAM_VALUE.M_AXIS_PHASE.TDEST_WIDTH" xilinx:valueSource="constant_prop" xilinx:valuePermission="bd"/>
+        <xilinx:configElementInfo xilinx:referenceId="BUSIFPARAM_VALUE.M_AXIS_PHASE.TID_WIDTH" xilinx:valueSource="constant_prop" xilinx:valuePermission="bd"/>
+        <xilinx:configElementInfo xilinx:referenceId="BUSIFPARAM_VALUE.M_AXIS_PHASE.TUSER_WIDTH" xilinx:valueSource="auto_prop" xilinx:valuePermission="bd"/>
+        <xilinx:configElementInfo xilinx:referenceId="BUSIFPARAM_VALUE.S_AXIS_CONFIG.HAS_TKEEP" xilinx:valueSource="user"/>
+        <xilinx:configElementInfo xilinx:referenceId="BUSIFPARAM_VALUE.S_AXIS_CONFIG.HAS_TLAST" xilinx:valueSource="user"/>
+        <xilinx:configElementInfo xilinx:referenceId="BUSIFPARAM_VALUE.S_AXIS_CONFIG.HAS_TREADY" xilinx:valueSource="user"/>
+        <xilinx:configElementInfo xilinx:referenceId="BUSIFPARAM_VALUE.S_AXIS_CONFIG.HAS_TSTRB" xilinx:valueSource="user"/>
+        <xilinx:configElementInfo xilinx:referenceId="BUSIFPARAM_VALUE.S_AXIS_CONFIG.LAYERED_METADATA" xilinx:valueSource="user"/>
+        <xilinx:configElementInfo xilinx:referenceId="BUSIFPARAM_VALUE.S_AXIS_CONFIG.TDATA_NUM_BYTES" xilinx:valueSource="user"/>
+        <xilinx:configElementInfo xilinx:referenceId="BUSIFPARAM_VALUE.S_AXIS_CONFIG.TDEST_WIDTH" xilinx:valueSource="user"/>
+        <xilinx:configElementInfo xilinx:referenceId="BUSIFPARAM_VALUE.S_AXIS_CONFIG.TID_WIDTH" xilinx:valueSource="user"/>
+        <xilinx:configElementInfo xilinx:referenceId="BUSIFPARAM_VALUE.S_AXIS_CONFIG.TUSER_WIDTH" xilinx:valueSource="user"/>
+        <xilinx:configElementInfo xilinx:referenceId="BUSIFPARAM_VALUE.S_AXIS_IQ512TDM.HAS_TKEEP" xilinx:valueSource="user"/>
+        <xilinx:configElementInfo xilinx:referenceId="BUSIFPARAM_VALUE.S_AXIS_IQ512TDM.HAS_TLAST" xilinx:valueSource="user"/>
+        <xilinx:configElementInfo xilinx:referenceId="BUSIFPARAM_VALUE.S_AXIS_IQ512TDM.HAS_TREADY" xilinx:valueSource="user"/>
+        <xilinx:configElementInfo xilinx:referenceId="BUSIFPARAM_VALUE.S_AXIS_IQ512TDM.HAS_TSTRB" xilinx:valueSource="user"/>
+        <xilinx:configElementInfo xilinx:referenceId="BUSIFPARAM_VALUE.S_AXIS_IQ512TDM.LAYERED_METADATA" xilinx:valueSource="user"/>
+        <xilinx:configElementInfo xilinx:referenceId="BUSIFPARAM_VALUE.S_AXIS_IQ512TDM.TDATA_NUM_BYTES" xilinx:valueSource="user"/>
+        <xilinx:configElementInfo xilinx:referenceId="BUSIFPARAM_VALUE.S_AXIS_IQ512TDM.TDEST_WIDTH" xilinx:valueSource="user"/>
+        <xilinx:configElementInfo xilinx:referenceId="BUSIFPARAM_VALUE.S_AXIS_IQ512TDM.TID_WIDTH" xilinx:valueSource="user"/>
+        <xilinx:configElementInfo xilinx:referenceId="BUSIFPARAM_VALUE.S_AXIS_IQ512TDM.TUSER_WIDTH" xilinx:valueSource="user"/>
+        <xilinx:configElementInfo xilinx:referenceId="BUSIFPARAM_VALUE.S_AXIS_RELOAD.HAS_TKEEP" xilinx:valueSource="user"/>
+        <xilinx:configElementInfo xilinx:referenceId="BUSIFPARAM_VALUE.S_AXIS_RELOAD.HAS_TLAST" xilinx:valueSource="user"/>
+        <xilinx:configElementInfo xilinx:referenceId="BUSIFPARAM_VALUE.S_AXIS_RELOAD.HAS_TREADY" xilinx:valueSource="user"/>
+        <xilinx:configElementInfo xilinx:referenceId="BUSIFPARAM_VALUE.S_AXIS_RELOAD.HAS_TSTRB" xilinx:valueSource="user"/>
+        <xilinx:configElementInfo xilinx:referenceId="BUSIFPARAM_VALUE.S_AXIS_RELOAD.LAYERED_METADATA" xilinx:valueSource="user"/>
+        <xilinx:configElementInfo xilinx:referenceId="BUSIFPARAM_VALUE.S_AXIS_RELOAD.TDATA_NUM_BYTES" xilinx:valueSource="user"/>
+        <xilinx:configElementInfo xilinx:referenceId="BUSIFPARAM_VALUE.S_AXIS_RELOAD.TDEST_WIDTH" xilinx:valueSource="user"/>
+        <xilinx:configElementInfo xilinx:referenceId="BUSIFPARAM_VALUE.S_AXIS_RELOAD.TID_WIDTH" xilinx:valueSource="user"/>
+        <xilinx:configElementInfo xilinx:referenceId="BUSIFPARAM_VALUE.S_AXIS_RELOAD.TUSER_WIDTH" xilinx:valueSource="user"/>
+      </xilinx:configElementInfos>
+    </xilinx:coreExtensions>
+    <xilinx:packagingInfo>
+      <xilinx:xilinxVersion>2019.2.1</xilinx:xilinxVersion>
+      <xilinx:checksum xilinx:scope="busInterfaces" xilinx:value="a1b0c6fc"/>
+      <xilinx:checksum xilinx:scope="fileGroups" xilinx:value="3ae4b995"/>
+      <xilinx:checksum xilinx:scope="ports" xilinx:value="eb4d4b88"/>
+      <xilinx:checksum xilinx:scope="parameters" xilinx:value="0937a381"/>
+    </xilinx:packagingInfo>
+  </spirit:vendorExtensions>
+</spirit:component>
